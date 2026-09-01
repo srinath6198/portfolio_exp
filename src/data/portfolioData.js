@@ -2,6 +2,7 @@
 import srinathImage from "../assets/srinath.png";
 import srinathVideo from "../assets/srinathvideo.mp4";
 import portraitImage from "../assets/portraitImage.jpg";
+import srinathcricketImage from "../assets/srinathcrick.jpeg";  
 export const personalData = {
   name: "Srinath M",
   brandName: "SRINATH",
@@ -335,8 +336,8 @@ export const testimonialsData = [
       "Srinath has been a reliable React developer who consistently takes ownership of his tasks. He worked on different Pozo application modules and handled UI development, API integration, and bug fixes effectively.",
     author: "Team Lead",
     role: "Pozo Project",
-    image:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop",
+    // image:
+    //   "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop",
     rating: 5
   },
   {
@@ -345,8 +346,8 @@ export const testimonialsData = [
       "Srinath worked well with the team and was actively involved in developing reusable React components, integrating APIs, and improving the overall application experience. He was always willing to learn and take on new challenges.",
     author: "Project Manager",
     role: "Pozo Project",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop",
+    // image:
+    //   "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop",
     rating: 5
   },
   {
@@ -355,8 +356,8 @@ export const testimonialsData = [
       "Srinath contributed to both web and mobile development using React and Capacitor. His work on API integration, authentication, QR and barcode scanning, and responsive UI helped improve the Pozo application.",
     author: "Senior Developer",
     role: "Pozo Project",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&auto=format&fit=crop",
+    // image:
+    //   "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&auto=format&fit=crop",
     rating: 5
   }
 ];
@@ -723,7 +724,7 @@ export const cricketData = {
   role: "Right-Hand Batter | Right-Arm Off Break",
   profileType: "Classicist / Aspirant",
   cricheroesUrl: "https://cricheroes.com/player-profile/10713808/srinath-m/matches",
-  image: srinathImage,
+  image: srinathcricketImage,
   video: srinathVideo,
   highlights: [
     "Right-hand batter with classical technique",

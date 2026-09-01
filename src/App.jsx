@@ -65,12 +65,12 @@ export const App = () => {
         <Projects />
         <Experience />
         <Skills />
-        <Cricket />
         <TechEcosystem />
         <CaseStudySpotlight onOpenContact={handleOpenContact} />
         <Testimonials />
         <CtaBanner onOpenContact={handleOpenContact} />
         <Disclosures />
+        <Cricket />
         <Contact />
       </main>
 

@@ -39,7 +39,7 @@ export const Testimonials = () => {
 
             <div className="quote-author-row">
               <div className="author-info">
-                <img src={current.image} alt={current.author} className="author-avatar" />
+                {/* <img src={current.image} alt={current.author} className="author-avatar" /> */}
                 <div>
                   <h4 className="author-name">{current.author}</h4>
                   <span className="author-role">{current.role}</span>
