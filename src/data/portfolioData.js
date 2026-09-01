@@ -1,8 +1,7 @@
-// =========================================================================
-// EDITORIAL PORTFOLIO CENTRAL DATA FILE
-// Curated for high-craft editorial aesthetic matching reference design
-// =========================================================================
 
+import srinathImage from "../assets/srinath.png";
+import srinathVideo from "../assets/srinathvideo.mp4";
+import portraitImage from "../assets/portraitImage.jpg";
 export const personalData = {
   name: "Srinath M",
   brandName: "SRINATH",
@@ -20,7 +19,7 @@ export const personalData = {
 
   // Unsplash Editorial Images (Curated high-res imagery)
   images: {
-    heroTeam: "src/assets/srinath.png",
+    heroTeam: srinathImage,
     engineerPortrait: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop", // Focused portrait
     engineerAtWork: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop", // Developer with laptop
     architecturalCta: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1000&auto=format&fit=crop", // Monochrome modern architectural landmark
@@ -73,7 +72,7 @@ export const competenciesData = {
   title: "Building modern full-stack applications with clean and scalable solutions",
   subtitle:
     "I develop responsive web applications and business solutions using React.js, Node.js, Python, TypeScript, MongoDB, and MySQL, with a strong focus on reusable components, reliable APIs, and maintainable code.",
-  portraitImage: "src/assets/portraitImage.jpg",
+  portraitImage: portraitImage,
   points: [
     {
       title: "React.js & Modern Frontend",
@@ -724,8 +723,8 @@ export const cricketData = {
   role: "Right-Hand Batter | Right-Arm Off Break",
   profileType: "Classicist / Aspirant",
   cricheroesUrl: "https://cricheroes.com/player-profile/10713808/srinath-m/matches",
-  image: "src/assets/srinathcrick.jpeg",
-  video: "src/assets/srinath video.mp4",
+  image: srinathImage,
+  video: srinathVideo,
   highlights: [
     "Right-hand batter with classical technique",
     "Right-arm off-break bowler",
