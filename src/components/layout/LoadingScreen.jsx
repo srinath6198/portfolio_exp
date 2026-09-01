@@ -34,7 +34,7 @@ export const LoadingScreen = ({ onComplete }) => {
       <div className="loader-center-box">
         <div className="loader-brand-symbol">✦</div>
         <div className="loader-brand-title">{personalData.brandName || personalData.name}</div>
-        <div className="loader-role-subtitle">Digital Engineering &amp; UI Architecture</div>
+        <div className="loader-role-subtitle">Full-Stack  &amp; Software Engineer</div>
 
         <div className="loader-progress-bar-track">
           <div className="loader-progress-bar-fill" style={{ width: `${progress}%` }} />
