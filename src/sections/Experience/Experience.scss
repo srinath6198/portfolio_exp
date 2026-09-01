@@ -1,0 +1,272 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.experience-section {
+  position: relative;
+  z-index: 2;
+  background-color: #F3EFEA;
+
+  .timeline-container {
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+    padding-left: 2.5rem;
+
+    @include mobile {
+      padding-left: 1.5rem;
+    }
+
+    .timeline-line-glow {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 14px;
+      width: 2px;
+      background: linear-gradient(180deg, #6366f1 0%, #06b6d4 50%, #10b981 100%);
+      box-shadow: 0 0 12px rgba(99, 102, 241, 0.6);
+
+      @include mobile {
+        left: 8px;
+      }
+    }
+
+    .timeline-items-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .timeline-item {
+      position: relative;
+
+      &:nth-child(even) {
+        .timeline-node .node-outer {
+          border-color: #ec4899;
+          box-shadow: 0 0 14px rgba(236, 72, 153, 0.6);
+        }
+        .timeline-card {
+          .exp-card-header {
+            .exp-badge {
+              color: #f9a8d4;
+              background: rgba(236, 72, 153, 0.12);
+              border-color: rgba(236, 72, 153, 0.3);
+            }
+            .company-meta .company-name {
+              color: #ec4899;
+            }
+            .exp-period-pill .cal-icon {
+              color: #d946ef;
+            }
+          }
+          .exp-achievements .achieve-list .achieve-item .check-icon {
+            color: #f43f5e;
+          }
+        }
+      }
+
+      &:nth-child(3n) {
+        .timeline-node .node-outer {
+          border-color: #10b981;
+          box-shadow: 0 0 14px rgba(16, 185, 129, 0.6);
+        }
+        .timeline-card {
+          .exp-card-header {
+            .exp-badge {
+              color: #6ee7b7;
+              background: rgba(16, 185, 129, 0.12);
+              border-color: rgba(16, 185, 129, 0.3);
+            }
+            .company-meta .company-name {
+              color: #10b981;
+            }
+            .exp-period-pill .cal-icon {
+              color: #059669;
+            }
+          }
+          .exp-achievements .achieve-list .achieve-item .check-icon {
+            color: #3b82f6;
+          }
+        }
+      }
+    }
+
+    .timeline-node {
+      position: absolute;
+      left: -2.5rem;
+      top: 2rem;
+      transform: translateX(-50%);
+
+      @include mobile {
+        left: -1.5rem;
+      }
+
+      .node-outer {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: rgba(9, 12, 18, 0.9);
+        border: 2px solid #06b6d4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 14px rgba(6, 182, 212, 0.6);
+
+        .node-inner {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: #ffffff;
+        }
+      }
+    }
+
+    .timeline-card {
+      padding: 2.5rem;
+      border-radius: 22px;
+      background: $bg-card;
+      border: 1px solid $border-card;
+      box-shadow: $shadow-card;
+
+      @include mobile {
+        padding: 1.5rem;
+      }
+
+      .exp-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 1.25rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        .exp-badge {
+          display: inline-block;
+          font-size: 0.75rem;
+          color: #a5b4fc;
+          background: rgba(99, 102, 241, 0.12);
+          border: 1px solid rgba(99, 102, 241, 0.3);
+          padding: 0.2rem 0.65rem;
+          border-radius: 6px;
+          margin-bottom: 0.5rem;
+          text-transform: uppercase;
+        }
+
+        .exp-role {
+          font-size: 1.45rem;
+          color: $text-primary;
+          font-weight: 700;
+          margin-bottom: 0.35rem;
+        }
+
+        .company-meta {
+          display: flex;
+          align-items: center;
+          gap: 0.65rem;
+          font-size: 0.88rem;
+          color: $text-secondary;
+          flex-wrap: wrap;
+
+          .company-name {
+            color: #06b6d4;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+          }
+
+          .meta-icon {
+            font-size: 0.95rem;
+          }
+
+          .exp-location {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            color: $text-muted;
+          }
+        }
+
+        .exp-period-pill {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.45rem;
+          padding: 0.4rem 0.9rem;
+          border-radius: 9999px;
+          background: $bg-sand;
+          border: 1px solid $border-card;
+          font-size: 0.8rem;
+          color: $text-secondary;
+          white-space: nowrap;
+
+          .cal-icon {
+            color: #6366f1;
+          }
+        }
+      }
+
+      .exp-description {
+        font-size: 1rem;
+        color: $text-secondary;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+      }
+
+      .exp-achievements {
+        background: $bg-secondary;
+        border: 1px solid $border-card;
+        border-radius: 14px;
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 1.5rem;
+
+        .achieve-title {
+          font-size: 0.75rem;
+          color: $text-muted;
+          letter-spacing: 0.06em;
+          margin-bottom: 0.85rem;
+        }
+
+        .achieve-list {
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+
+          .achieve-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.65rem;
+            font-size: 0.92rem;
+            color: $text-primary;
+            line-height: 1.5;
+
+            .check-icon {
+              color: #10b981;
+              margin-top: 0.2rem;
+              flex-shrink: 0;
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      .exp-tech-footer {
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+        flex-wrap: wrap;
+
+        .tech-label {
+          font-size: 0.75rem;
+          color: $text-muted;
+          letter-spacing: 0.05em;
+        }
+
+        .exp-tech-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+@use 'variables' as *;
+
+// ==========================================
+// LUXURY EDITORIAL MIXINS
+// ==========================================
+
+// Responsive Mixins
+@mixin mobile {
+  @media (max-width: #{$bp-sm - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$bp-lg - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$bp-lg}) {
+    @content;
+  }
+}
+
+@mixin wide {
+  @media (min-width: #{$bp-xl}) {
+    @content;
+  }
+}
+
+// Clean Editorial Cards
+@mixin card-sand {
+  background-color: $bg-sand;
+  border: 1px solid $border-card;
+  border-radius: 20px;
+  transition: transform $transition-smooth, box-shadow $transition-smooth, background-color $transition-smooth;
+
+  &:hover {
+    background-color: $bg-sand-hover;
+    transform: translateY(-2px);
+    box-shadow: $shadow-card;
+  }
+}
+
+@mixin card-white {
+  background-color: $bg-card;
+  border: 1px solid $border-card;
+  border-radius: 20px;
+  box-shadow: $shadow-subtle;
+  transition: transform $transition-smooth, box-shadow $transition-smooth;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-hover;
+  }
+}
+
+@mixin card-dark {
+  background-color: $bg-dark-card;
+  border: 1px solid $border-dark;
+  border-radius: 20px;
+  color: $text-light;
+  transition: transform $transition-smooth, box-shadow $transition-smooth;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-dark;
+  }
+}
+
+// Custom Light Mode Scrollbar
+@mixin custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #FAF8F5;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(18, 19, 22, 0.2);
+    border-radius: 9999px;
+
+    &:hover {
+      background: rgba(18, 19, 22, 0.4);
+    }
+  }
+}
+
+// Pill Button Shapes
+@mixin btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.6rem;
+  border-radius: 9999px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  transition: all $transition-smooth;
+  cursor: pointer;
+  white-space: nowrap;
+}

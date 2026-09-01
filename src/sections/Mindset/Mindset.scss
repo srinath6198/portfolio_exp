@@ -1,0 +1,268 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.mindset-section {
+  position: relative;
+  z-index: 2;
+
+  .process-timeline-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    position: relative;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    @include custom-scrollbar;
+
+    @include tablet {
+      gap: 1rem;
+      justify-content: flex-start;
+    }
+
+    .timeline-step-btn {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.75rem 1.25rem;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      transition: all $transition-smooth;
+      position: relative;
+      flex-shrink: 0;
+
+      .step-number-wrap {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: $text-secondary;
+        transition: all $transition-fast;
+      }
+
+      .step-text-wrap {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+
+        .step-title {
+          font-size: 0.95rem;
+          font-weight: 600;
+          color: $text-secondary;
+        }
+
+        .step-sub {
+          font-size: 0.75rem;
+          color: $text-muted;
+        }
+      }
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(255, 255, 255, 0.2);
+
+        .step-text-wrap .step-title {
+          color: #ffffff;
+        }
+      }
+
+      &.active {
+        background: rgba(99, 102, 241, 0.15);
+        border-color: rgba(99, 102, 241, 0.5);
+        box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+
+        .step-number-wrap {
+          background: linear-gradient(135deg, #6366f1, #06b6d4);
+          color: #ffffff;
+          border-color: transparent;
+        }
+
+        .step-text-wrap .step-title {
+          color: #ffffff;
+        }
+
+        .step-text-wrap .step-sub {
+          color: $accent-cyan;
+        }
+      }
+    }
+  }
+
+  .active-process-card {
+    background: rgba(14, 18, 28, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 3rem;
+    backdrop-filter: blur(20px);
+
+    @include mobile {
+      padding: 1.75rem;
+    }
+
+    .process-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+
+      .step-badge {
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: #a5b4fc;
+        background: rgba(99, 102, 241, 0.12);
+        border: 1px solid rgba(99, 102, 241, 0.3);
+        padding: 0.4rem 0.9rem;
+        border-radius: 9999px;
+
+        .step-divider {
+          color: $text-muted;
+          margin-left: 0.25rem;
+        }
+      }
+
+      .step-icon-badge {
+        width: 52px;
+        height: 52px;
+        border-radius: 16px;
+        background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(6, 182, 212, 0.2));
+        border: 1px solid rgba(99, 102, 241, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #61dafb;
+        font-size: 1.5rem;
+      }
+    }
+
+    .process-card-content {
+      margin-bottom: 2.5rem;
+
+      .phase-headline-group {
+        margin-bottom: 2rem;
+
+        .phase-title {
+          font-size: clamp(1.5rem, 2.4vw, 2.2rem);
+          font-weight: 800;
+          color: #ffffff;
+          margin-bottom: 1rem;
+        }
+
+        .phase-description {
+          font-size: 1.1rem;
+          color: $text-secondary;
+          line-height: 1.75;
+          max-width: 800px;
+        }
+      }
+
+      .phase-deliverables-panel {
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 16px;
+        padding: 1.5rem 1.75rem;
+
+        .deliverables-title {
+          font-size: 0.78rem;
+          color: $text-muted;
+          letter-spacing: 0.08em;
+          margin-bottom: 1rem;
+        }
+
+        .deliverables-list {
+          list-style: none;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 1rem;
+
+          .deliverable-item {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            color: $text-primary;
+            font-size: 0.88rem;
+
+            .check-box {
+              width: 22px;
+              height: 22px;
+              border-radius: 6px;
+              background: rgba(16, 185, 129, 0.15);
+              border: 1px solid rgba(16, 185, 129, 0.35);
+              color: #34d399;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 0.85rem;
+              flex-shrink: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .process-nav-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 1.75rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+      .proc-ctrl-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.55rem 1.15rem;
+        border-radius: 9999px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        color: $text-secondary;
+        font-size: 0.85rem;
+        font-weight: 500;
+        transition: all $transition-fast;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.1);
+          color: #ffffff;
+          border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        &.next {
+          background: rgba(99, 102, 241, 0.2);
+          border-color: rgba(99, 102, 241, 0.4);
+          color: #ffffff;
+
+          &:hover {
+            background: rgba(99, 102, 241, 0.35);
+          }
+        }
+      }
+
+      .proc-dots-indicator {
+        display: flex;
+        gap: 0.5rem;
+
+        .dot-indicator {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.15);
+          cursor: pointer;
+          transition: all $transition-fast;
+
+          &.active {
+            width: 24px;
+            border-radius: 4px;
+            background: $accent-cyan;
+            box-shadow: 0 0 8px $accent-cyan;
+          }
+        }
+      }
+    }
+  }
+}

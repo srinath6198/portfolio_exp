@@ -1,0 +1,130 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.editorial-tech-ecosystem-section {
+  background-color: $bg-primary;
+  border-bottom: 1px solid $border-card;
+
+  .tech-ecosystem-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 4rem;
+    align-items: center;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+
+  .ecosystem-text-col {
+    .ecosystem-title {
+      margin-bottom: 1.25rem;
+      color: $text-primary;
+
+      .serif-accent {
+        font-family: $font-serif;
+        font-style: italic;
+        font-weight: 400;
+      }
+    }
+
+    .ecosystem-desc {
+      font-size: 1.08rem;
+      line-height: 1.7;
+      color: $text-secondary;
+      margin-bottom: 2rem;
+      max-width: 520px;
+    }
+
+    .ecosystem-metric-callout {
+      border-left: 2px solid $text-primary;
+      padding-left: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+
+      .callout-val {
+        font-family: $font-serif;
+        font-size: 2rem;
+        font-weight: 400;
+        color: $text-primary;
+        line-height: 1;
+      }
+
+      .callout-lbl {
+        font-size: 0.88rem;
+        color: $text-muted;
+      }
+    }
+  }
+
+  .ecosystem-bento-col {
+    .ecosystem-sand-card {
+      background-color: $bg-sand;
+      border: 1px solid $border-card;
+      border-radius: 24px;
+      padding: 2.25rem;
+      box-shadow: $shadow-card;
+
+      @include mobile {
+        padding: 1.5rem;
+      }
+
+      .tech-logos-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.25rem;
+
+        @include mobile {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .tech-logo-tile {
+          background-color: rgba(255, 255, 255, 0.75);
+          border: 1px solid rgba(18, 19, 22, 0.06);
+          border-radius: 16px;
+          padding: 1.25rem 0.85rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          transition: all $transition-fast;
+
+          &:hover {
+            background-color: #FFFFFF;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(18, 19, 22, 0.05);
+            border-color: rgba(18, 19, 22, 0.15);
+
+            .tile-icon-wrap .tech-icon-svg {
+              transform: scale(1.1);
+            }
+          }
+
+          .tile-icon-wrap {
+            margin-bottom: 0.75rem;
+            color: $text-primary;
+
+            .tech-icon-svg {
+              font-size: 1.8rem;
+              transition: transform $transition-fast;
+            }
+          }
+
+          .tile-name {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: $text-primary;
+            margin-bottom: 0.15rem;
+          }
+
+          .tile-category {
+            font-size: 0.7rem;
+            color: $text-muted;
+          }
+        }
+      }
+    }
+  }
+}

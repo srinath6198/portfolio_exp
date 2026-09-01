@@ -1,0 +1,67 @@
+// ==========================================
+// LUXURY EDITORIAL DESIGN SYSTEM VARIABLES
+// Inspired by high-craft editorial fintech/agency design
+// ==========================================
+
+// Primary Editorial Palette (Light / Ivory / Sand)
+$bg-primary: #FAF8F5; // Warm canvas base
+$bg-secondary: #F3EFEA; // Soft ivory section contrast
+$bg-tertiary: #EBE5DC; // Card borders & soft depth
+$bg-card: #FFFFFF; // Crisp white cards
+$bg-sand: #F2ECE4; // Warm sandy bento card
+$bg-sand-hover: #E9E1D6; // Bento card hover state
+$bg-glass: rgba(250, 248, 245, 0.85);
+
+// Dark Editorial Accents (Footer / Dark Mode Cards)
+$bg-dark: #0E0F12; // Deep editorial black
+$bg-dark-card: #18191E; // Dark UI showcase card
+$bg-dark-elevated: #22242B; // Dark elevated card
+
+// Hairline Borders & Dividers
+$border-subtle: rgba(18, 19, 22, 0.08);
+$border-medium: rgba(18, 19, 22, 0.15);
+$border-card: #E5E0D8;
+$border-dark: rgba(255, 255, 255, 0.1);
+
+// Typography Colors
+$text-primary: #121316; // Deep ink black
+$text-secondary: #4A4D54; // Charcoal body text
+$text-muted: #787B83; // Subtle meta text
+$text-dim: #9EA1A8; // Light caption text
+$text-light: #F7F6F3; // White/Ivory text on dark surfaces
+$text-light-muted: #A0A4AB; // Muted text on dark surfaces
+
+// Curated Editorial Accents
+$accent-primary: #121316; // Primary black CTA
+$accent-blue: #1A56DB; // Subtle editorial royal blue highlight
+$accent-terracotta: #C85A32; // Warm terracotta highlight
+$accent-amber: #D97706; // Warm brass / amber
+
+// Gradients & Surface Overlays
+$gradient-sand: linear-gradient(180deg, #F5F0E8 0%, #EDE5D8 100%);
+$gradient-card-subtle: linear-gradient(180deg, #FFFFFF 0%, #FAF8F5 100%);
+$gradient-dark: linear-gradient(180deg, #121316 0%, #08090B 100%);
+
+// Editorial Typography
+$font-serif: 'Instrument Serif', 'Playfair Display', Georgia, serif;
+$font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+$font-mono: 'JetBrains Mono', monospace;
+
+// Shadows (Subtle, organic luxury shadows)
+$shadow-subtle: 0 1px 3px rgba(18, 19, 22, 0.04), 0 4px 12px rgba(18, 19, 22, 0.03);
+$shadow-card: 0 4px 20px -2px rgba(18, 19, 22, 0.06);
+$shadow-hover: 0 12px 32px -4px rgba(18, 19, 22, 0.1);
+$shadow-dark: 0 16px 40px -8px rgba(0, 0, 0, 0.4);
+
+// Transitions
+$transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+$transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+$transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+// Breakpoints
+$bp-xs: 480px;
+$bp-sm: 640px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1280px;
+$bp-2xl: 1536px;

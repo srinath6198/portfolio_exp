@@ -1,0 +1,74 @@
+@use '../../styles/variables' as *;
+
+// ==========================================
+// CELESTIAL STAR ✦ & STARDUST TRAIL CURSOR
+// ==========================================
+
+.cursor-stardust-canvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  width: 100vw;
+  height: 100vh;
+}
+
+.celestial-star-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-top: -14px;
+  margin-left: -14px;
+  will-change: transform;
+  transition: scale 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+
+  .star-symbol {
+    font-size: 1.15rem;
+    color: #121316;
+    line-height: 1;
+    display: inline-block;
+    filter: drop-shadow(0 2px 4px rgba(18, 19, 22, 0.15));
+    transition: transform 0.3s ease, color 0.2s ease;
+    animation: gentleSpin 10s linear infinite;
+  }
+
+  // Hover over clickable items
+  &.hovered {
+    scale: 1.6;
+
+    .star-symbol {
+      color: $accent-blue;
+      filter: drop-shadow(0 0 8px rgba(26, 86, 219, 0.5));
+      transform: rotate(45deg);
+    }
+  }
+
+  // On click
+  &.clicked {
+    scale: 0.8;
+  }
+}
+
+@keyframes gentleSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Disable on touch screens
+@media (hover: none) and (pointer: coarse) {
+  .cursor-stardust-canvas,
+  .celestial-star-cursor {
+    display: none !important;
+  }
+}

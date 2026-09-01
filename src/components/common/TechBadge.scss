@@ -1,0 +1,41 @@
+@use '../../styles/variables' as *;
+
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: $text-secondary;
+  font-family: $font-mono;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: all $transition-fast;
+  white-space: nowrap;
+
+  .badge-icon {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.95em;
+  }
+
+  &:hover {
+    background: rgba(99, 102, 241, 0.12);
+    border-color: rgba(99, 102, 241, 0.35);
+    color: #ffffff;
+    transform: translateY(-1px);
+  }
+
+  &.size-md {
+    padding: 0.45rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  &.size-lg {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.92rem;
+  }
+}

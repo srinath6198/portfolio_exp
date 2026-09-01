@@ -1,0 +1,94 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.editorial-disclosures-section {
+  background-color: $bg-primary;
+  border-bottom: 1px solid $border-card;
+
+  .disclosures-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 4.5rem;
+    align-items: flex-start;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+
+  .disclosures-heading-side {
+    .disclosures-title {
+      color: $text-primary;
+      margin-bottom: 1.25rem;
+
+      .serif-accent {
+        font-family: $font-serif;
+        font-style: italic;
+        font-weight: 400;
+      }
+    }
+
+    .disclosures-sub {
+      font-size: 1.05rem;
+      color: $text-secondary;
+      line-height: 1.65;
+      max-width: 440px;
+    }
+  }
+
+  .disclosures-accordion-side {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid $border-card;
+
+    .disclosure-accordion-row {
+      border-bottom: 1px solid $border-card;
+      padding: 1.5rem 0;
+      cursor: pointer;
+      transition: all $transition-fast;
+
+      &:hover .disclosure-row-header .disclosure-question {
+        color: $accent-blue;
+      }
+
+      .disclosure-row-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+
+        .disclosure-question {
+          font-size: 1.12rem;
+          font-weight: 600;
+          color: $text-primary;
+          letter-spacing: -0.015em;
+          transition: color $transition-fast;
+        }
+
+        .disclosure-arrow {
+          color: $text-muted;
+          transition: transform $transition-smooth;
+          flex-shrink: 0;
+
+          &.active {
+            transform: rotate(180deg);
+            color: $text-primary;
+          }
+        }
+      }
+
+      .disclosure-row-body {
+        margin-top: 1rem;
+        padding-right: 1.5rem;
+        animation: fadeIn 0.25s ease;
+
+        .disclosure-answer {
+          font-size: 0.96rem;
+          line-height: 1.7;
+          color: $text-secondary;
+        }
+      }
+    }
+  }
+}

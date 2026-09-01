@@ -1,0 +1,115 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// ==========================================
+// LUXURY EDITORIAL TYPOGRAPHY SYSTEM
+// ==========================================
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-sans;
+  color: $text-primary;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 4.8vw + 0.8rem, 4.4rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1.12;
+
+  .serif-accent {
+    font-family: $font-serif;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+}
+
+h2 {
+  font-size: clamp(2rem, 3.5vw + 0.4rem, 3.2rem);
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+
+  .serif-accent {
+    font-family: $font-serif;
+    font-style: italic;
+    font-weight: 400;
+  }
+}
+
+h3 {
+  font-size: clamp(1.35rem, 1.8vw + 0.3rem, 1.85rem);
+  letter-spacing: -0.025em;
+}
+
+h4 {
+  font-size: clamp(1.1rem, 1.2vw + 0.2rem, 1.35rem);
+  font-weight: 600;
+}
+
+p {
+  color: $text-secondary;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  letter-spacing: -0.01em;
+}
+
+.text-editorial-serif {
+  font-family: $font-serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.text-muted {
+  color: $text-muted;
+}
+
+.text-subtle {
+  color: $text-dim;
+}
+
+.font-mono {
+  font-family: $font-mono;
+}
+
+// Section Label Pills (e.g. [ OVERVIEW ], [ CAPABILITIES ])
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: $font-sans;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $text-muted;
+  margin-bottom: 1.25rem;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $text-primary;
+  }
+}
+
+// Editorial Highlighted Text Link
+.editorial-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+  color: $text-primary;
+  border-bottom: 1.5px solid rgba(18, 19, 22, 0.3);
+  padding-bottom: 2px;
+  transition: all $transition-fast;
+
+  &:hover {
+    border-bottom-color: $text-primary;
+    gap: 0.6rem;
+  }
+}
